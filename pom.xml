@@ -132,9 +132,12 @@
                 <version>1.9.8</version>
             </dependency>
 		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-lang3</artifactId>
-		</dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-lang3</artifactId>
+				<!-- <version>PLEASE DON'T USE COMMONS LANG</version> -->
+				<version>3.1</version>
+				<optional>true</optional>
+			</dependency>
   </dependencies>
   
   <build>
