@@ -1,0 +1,5 @@
+#Mon May 06 17:29:21 IST 2013
+org.eclipse.jdt.core.compiler.codegen.targetPlatform=${java.target.version}
+eclipse.preferences.version=1
+org.eclipse.jdt.core.compiler.source=${java.source.version}
+org.eclipse.jdt.core.compiler.compliance=${java.source.version}
