@@ -3,7 +3,7 @@
 
   <groupId>com.myapp</groupId>
   <artifactId>myreleaseapp</artifactId>
-  <version>1.4-SNAPSHOT</version>
+  <version>1.5-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>myreleaseapp</name>
@@ -25,12 +25,12 @@
 			<id>release</id>
 			<name>Cloudbees release repository</name>
 			<!-- Webdav repository url are prefixed with dav: -->
-			<url>https://repository-bfds.forge.cloudbees.com/release/</url>
+			<url>dav:https://repository-bfds.forge.cloudbees.com/release/</url>
 		</repository>
 		<snapshotRepository>
 			<id>snapshot</id>
 			<name>Cloudbees snapshot repository</name>
-			<url>https://repository-bfds.forge.cloudbees.com/snapshot/</url>
+			<url>dav:https://repository-bfds.forge.cloudbees.com/snapshot/</url>
 		</snapshotRepository>
 	</distributionManagement>
   <repositories>
