@@ -3,7 +3,7 @@
 
   <groupId>com.myapp</groupId>
   <artifactId>myreleaseapp</artifactId>
-  <version>1.6-SNAPSHOT</version>
+  <version>1.8-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>myreleaseapp</name>
@@ -45,34 +45,16 @@
             <name>Spring Maven Milestone Repository</name>
             <url>http://maven.springframework.org/milestone</url>
         </repository>
-        <repository>
-            <id>spring-roo-repository</id>
-            <name>Spring Roo Repository</name>
-            <url>http://spring-roo-repository.springsource.org/release</url>
-        </repository>
-	<!-- Cloudbees maven repositories for releases and snapshots -->
-		<repository>
-			<id>release</id>
-			<name>Cloudbees release repository</name>
-			<url>https://repository-bfds.forge.cloudbees.com/release</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
+	
+		<!--<repository>
+			<id>codehaus</id>
+			<name>Maven Codehaus repository</name>
+			<url>http://repository.codehaus.org</url>
 			<snapshots>
 				<enabled>false</enabled>
 			</snapshots>
-		</repository>
-		<repository>
-			<id>snapshot</id>
-			<name>Cloudbees snapshot repository</name>
-			<url>https://repository-bfds.forge.cloudbees.com/snapshot</url>
-			<releases>
-				<enabled>false</enabled>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
+		</repository>-->
+		
 	</repositories>
   
   <dependencies>
@@ -86,12 +68,41 @@
         <groupId>org.apache.maven.wagon</groupId>
         <artifactId>wagon-webdav</artifactId>
         <version>1.0-beta-1</version>
-</dependency>
-<dependency>
-				<groupId>org.slf4j</groupId>
-				<artifactId>slf4j-api</artifactId>
-				<version>${slf4j.version}</version>
-			</dependency>
+	</dependency>
+
+	<dependency>
+		<groupId>org.slf4j</groupId>
+		<artifactId>slf4j-api</artifactId>
+		<version>${slf4j.version}</version>
+	</dependency>
+	<!-- <dependency>
+		<groupId>org.codehaus.woodstox</groupId>
+		<artifactId>woodstox-core-asl</artifactId>
+		<version>4.0.6</version>
+		<optional>true</optional>
+		<exclusions>
+			<exclusion>
+				<groupId>stax</groupId>
+				<artifactId>stax-api</artifactId>
+			</exclusion>
+		</exclusions>
+	</dependency>
+	<dependency>
+		<groupId>org.codehaus.jettison</groupId>
+		<artifactId>jettison</artifactId>
+		<version>1.1</version>
+		<exclusions>
+			<exclusion>
+				<groupId>stax</groupId>
+				<artifactId>stax-api</artifactId>
+			</exclusion>
+		</exclusions>
+	</dependency>
+	<dependency>
+                <groupId>org.codehaus.jackson</groupId>
+                <artifactId>jackson-jaxrs</artifactId>
+                <version>1.9.8</version>
+            </dependency>-->
   </dependencies>
   
   <build>
@@ -210,41 +221,8 @@
 					<artifactId>maven-jetty-plugin</artifactId>
 					<version>${jetty.version}</version>
 				</plugin>
-				<!--This plugin's configuration is used to store Eclipse m2e settings 
-					only. It has no influence on the Maven build itself. -->
-				<plugin>
-					<groupId>org.eclipse.m2e</groupId>
-					<artifactId>lifecycle-mapping</artifactId>
-					<version>1.0.0</version>
-					<configuration>
-						<lifecycleMappingMetadata>
-							<pluginExecutions>
-								<pluginExecution>
-									<pluginExecutionFilter>
-										<groupId>
-											org.zeroturnaround
-										</groupId>
-										<artifactId>
-											jrebel-maven-plugin
-										</artifactId>
-										<versionRange>
-											[1.0.7,)
-										</versionRange>
-										<goals>
-											<goal>generate</goal>
-										</goals>
-									</pluginExecutionFilter>
-									<action>
-										<ignore />
-									</action>
-								</pluginExecution>
-							</pluginExecutions>
-						</lifecycleMappingMetadata>
-					</configuration>
-				</plugin>
 			</plugins>
 
 		</pluginManagement>
 	</build>
-	
 </project>
