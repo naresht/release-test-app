@@ -25,12 +25,12 @@
 			<id>release</id>
 			<name>Cloudbees release repository</name>
 			<!-- Webdav repository url are prefixed with dav: -->
-			<url>dav:https://repository-bfds.forge.cloudbees.com/release/</url>
+			<url>https://repository-bfds.forge.cloudbees.com/release/</url>
 		</repository>
 		<snapshotRepository>
 			<id>snapshot</id>
 			<name>Cloudbees snapshot repository</name>
-			<url>dav:https://repository-bfds.forge.cloudbees.com/snapshot/</url>
+			<url>https://repository-bfds.forge.cloudbees.com/snapshot/</url>
 		</snapshotRepository>
 	</distributionManagement>
   <repositories>

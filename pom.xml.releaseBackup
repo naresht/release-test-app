@@ -3,7 +3,7 @@
 
   <groupId>com.myapp</groupId>
   <artifactId>myreleaseapp</artifactId>
-  <version>1.2-SNAPSHOT</version>
+  <version>1.3-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>myreleaseapp</name>
@@ -22,17 +22,57 @@
   
   <distributionManagement>
 		<repository>
-		  <id>saec-cloudbees-release</id>
-		  <name>saec-cloudbees-release</name>
-		 <!-- Webdav repository url are prefixed with dav:-->
-		  <url>dav:https://repository-bfds.forge.cloudbees.com/release/</url>
+			<id>release</id>
+			<name>Cloudbees release repository</name>
+			<!-- Webdav repository url are prefixed with dav: -->
+			<url>dav:https://repository-bfds.forge.cloudbees.com/release/</url>
 		</repository>
 		<snapshotRepository>
-			<id>saec-cloudbees-snapshot</id>
-			<name>saec-cloudbees-snapshot</name>
+			<id>snapshot</id>
+			<name>Cloudbees snapshot repository</name>
 			<url>dav:https://repository-bfds.forge.cloudbees.com/snapshot/</url>
 		</snapshotRepository>
 	</distributionManagement>
+  <repositories>
+	<repository>
+            <id>spring-maven-release</id>
+            <name>Spring Maven Release Repository</name>
+            <url>http://maven.springframework.org/release</url>
+        </repository>
+        <repository>
+            <id>spring-maven-milestone</id>
+            <name>Spring Maven Milestone Repository</name>
+            <url>http://maven.springframework.org/milestone</url>
+        </repository>
+        <repository>
+            <id>spring-roo-repository</id>
+            <name>Spring Roo Repository</name>
+            <url>http://spring-roo-repository.springsource.org/release</url>
+        </repository>
+	<!-- Cloudbees maven repositories for releases and snapshots -->
+		<repository>
+			<id>release</id>
+			<name>Cloudbees release repository</name>
+			<url>https://repository-bfds.forge.cloudbees.com/release</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>snapshot</id>
+			<name>Cloudbees snapshot repository</name>
+			<url>https://repository-bfds.forge.cloudbees.com/snapshot</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
   
   <dependencies>
     <dependency>
@@ -195,4 +235,5 @@
 
 		</pluginManagement>
 	</build>
+	
 </project>
