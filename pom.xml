@@ -225,13 +225,4 @@
 
 		</pluginManagement>
 	</build>
-	<pluginRepositories>
-		<pluginRepository>
-			<id>Codehaus Releases</id>
-			<url>https://nexus.codehaus.org/content/repositories/releases</url>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</pluginRepository>
-	</pluginRepositories>
 </project>
