@@ -3,7 +3,7 @@
 
   <groupId>com.myapp</groupId>
   <artifactId>myreleaseapp</artifactId>
-  <version>3.1-SNAPSHOT</version>
+  <version>3.1</version>
   <packaging>jar</packaging>
 
   <name>myreleaseapp</name>
