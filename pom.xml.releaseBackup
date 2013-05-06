@@ -3,7 +3,7 @@
 
   <groupId>com.myapp</groupId>
   <artifactId>myreleaseapp</artifactId>
-  <version>2.5-SNAPSHOT</version>
+  <version>3.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>myreleaseapp</name>
@@ -50,17 +50,11 @@
             <name>Spring Roo Repository</name>
             <url>http://spring-roo-repository.springsource.org/release</url>
         </repository>
-	<repository>
-			<id>codehaus</id>
-			<name>Maven Codehaus repository</name>
-			<url>http://repository.codehaus.org</url>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
+	<!-- Cloudbees maven repositories for releases and snapshots -->
 		<repository>
-			<id>jboss-public</id>
-			<url>http://repository.jboss.org/nexus/content/groups/public-jboss/</url>
+			<id>release</id>
+			<name>Cloudbees release repository</name>
+			<url>https://repository-bfds.forge.cloudbees.com/release</url>
 			<releases>
 				<enabled>true</enabled>
 			</releases>
@@ -69,32 +63,16 @@
 			</snapshots>
 		</repository>
 		<repository>
-		   <id>terracotta-releases</id>
-		   <url>http://www.terracotta.org/download/reflector/releases</url>
-		   <releases><enabled>true</enabled></releases>
-		   <snapshots><enabled>false</enabled></snapshots>
-		</repository>		
-		<repository>
-            <id>bdfs-cb-releases</id>
-		   <url>https://repository-bfds.forge.cloudbees.com/release</url>
-		   <releases><enabled>true</enabled></releases>
-		   <snapshots><enabled>false</enabled></snapshots>
+			<id>snapshot</id>
+			<name>Cloudbees snapshot repository</name>
+			<url>https://repository-bfds.forge.cloudbees.com/snapshot</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
 		</repository>
-    <!-- Cloudbees maven repositories for releases and snapshots -->
-		<repository>
-		  <id>saec-cloudbees-release</id>
-		  <name>saec-cloudbees-release</name>
-		  <url>https://repository-bfds.forge.cloudbees.com/release/</url>
-		  <releases><enabled>true</enabled></releases>
-		  <snapshots><enabled>false</enabled> </snapshots>
-		</repository>
-		<repository>
-		  <id>saec-cloudbees-snapshot</id>
-		  <name>saec-cloudbees-snapshot</name>
-		  <url>https://repository-bfds.forge.cloudbees.com/snapshot/</url>
-		  <releases><enabled>false</enabled></releases>
-		  <snapshots><enabled>true</enabled></snapshots>
-		</repository>				
 		
 		<repository>
 			<id>codehaus</id>
@@ -161,8 +139,8 @@
 				repository using Webdav -->
 			<extension>
 				<groupId>org.apache.maven.wagon</groupId>
-				<artifactId>wagon-webdav-jackrabbit</artifactId>
-				<version>2.2</version>
+            <artifactId>wagon-webdav</artifactId>
+            <version>1.0-beta-2</version>
 			</extension>
 		</extensions>
 		<pluginManagement>
@@ -308,7 +286,14 @@
 		</pluginManagement>
 	</build>
 	<pluginRepositories>
-		
+		<pluginRepository>
+			<id>spring-maven-release</id>
+			<name>Spring Maven Release Repository</name>
+			<url>http://maven.springframework.org/release</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
 		<pluginRepository>
 			<id>Codehaus Releases</id>
 			<url>https://nexus.codehaus.org/content/repositories/releases</url>
@@ -316,6 +301,15 @@
 				<enabled>false</enabled>
 			</snapshots>
 		</pluginRepository>
-			
+		<pluginRepository>
+			<id>spring-maven-milestone</id>
+			<name>Spring Maven Milestone Repository</name>
+			<url>http://maven.springframework.org/milestone</url>
+		</pluginRepository>
+		<pluginRepository>
+			<id>spring-roo-repository</id>
+			<name>Spring Roo Repository</name>
+			<url>http://spring-roo-repository.springsource.org/release</url>
+		</pluginRepository>		
 	</pluginRepositories>
 </project>
