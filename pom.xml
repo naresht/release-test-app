@@ -195,12 +195,6 @@
 					</exclusion>
 				</exclusions>
 			</dependency>
-			<dependency>
-				<!-- This is our fake version that is empty -->
-				<groupId>commons-logging</groupId>
-				<artifactId>commons-logging</artifactId>
-				<version>99.0.3.EMPTY-SNAPSHOT</version>
-			</dependency>
   </dependencies>
   
   <build>
