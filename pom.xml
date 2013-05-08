@@ -3,7 +3,7 @@
 
   <groupId>com.myapp</groupId>
   <artifactId>myreleaseapp</artifactId>
-  <version>3.2.RC1-SNAPSHOT</version>
+  <version>1.2.RC1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>myreleaseapp</name>
@@ -92,11 +92,11 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-	<dependency>
+	<!--<dependency>
         <groupId>org.apache.maven.wagon</groupId>
         <artifactId>wagon-webdav</artifactId>
         <version>1.0-beta-1</version>
-	</dependency>
+	</dependency>-->
 
 	<dependency>
 		<groupId>org.slf4j</groupId>
@@ -209,8 +209,8 @@
 				repository using Webdav -->
 			<extension>
 				<groupId>org.apache.maven.wagon</groupId>
-            <artifactId>wagon-webdav</artifactId>
-            <version>1.0-beta-2</version>
+				<artifactId>wagon-webdav-jackrabbit</artifactId>
+				<version>2.2</version>
 			</extension>
 		</extensions>
 		<pluginManagement>
