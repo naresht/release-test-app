@@ -3,7 +3,7 @@
 
   <groupId>com.myapp</groupId>
   <artifactId>myreleaseapp</artifactId>
-  <version>3.2-SNAPSHOT</version>
+  <version>3.2.RC1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>myreleaseapp</name>
@@ -137,6 +137,69 @@
 				<!-- <version>PLEASE DON'T USE COMMONS LANG</version> -->
 				<version>3.1</version>
 				<optional>true</optional>
+			</dependency>
+			<dependency>
+				<groupId>commons-io</groupId>
+				<artifactId>commons-io</artifactId>
+				<version>1.4</version>
+				<optional>true</optional>
+			</dependency>
+			<dependency>
+				<groupId>commons-pool</groupId>
+				<artifactId>commons-pool</artifactId>
+				<version>1.5.4</version>
+				<exclusions>
+					<exclusion>
+						<groupId>commons-logging</groupId>
+						<artifactId>commons-logging</artifactId>
+					</exclusion>
+				</exclusions>				
+			</dependency>
+			<dependency>
+				<groupId>commons-collections</groupId>
+				<artifactId>commons-collections</artifactId>
+				<version>3.2</version>
+				<optional>true</optional>
+			</dependency>
+            <dependency>
+                <groupId>commons-digester</groupId>
+                <artifactId>commons-digester</artifactId>
+                <version>2.0</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>commons-logging</groupId>
+                        <artifactId>commons-logging</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+				<groupId>commons-dbcp</groupId>
+				<artifactId>commons-dbcp</artifactId>
+				<version>1.4</version>
+				<exclusions>
+					<exclusion>
+						<groupId>commons-logging</groupId>
+						<artifactId>commons-logging</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>xerces</groupId>
+						<artifactId>xerces</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>xerces</groupId>
+						<artifactId>xercesImpl</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>xml-apis</groupId>
+						<artifactId>xml-apis</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+			<dependency>
+				<!-- This is our fake version that is empty -->
+				<groupId>commons-logging</groupId>
+				<artifactId>commons-logging</artifactId>
+				<version>99.0.3.EMPTY-SNAPSHOT</version>
 			</dependency>
   </dependencies>
   
