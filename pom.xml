@@ -21,16 +21,19 @@
 	  <tag>HEAD</tag>
   </scm>
   
-  <distributionManagement>
+ <distributionManagement>
 		<repository>
-			<id>releases</id>
-			<url>http://localhost:8081/nexus/content/repositories/releases</url>
+		  <id>saec-cloudbees-release</id>
+		  <name>saec-cloudbees-release</name>
+		  <!-- Webdav repository url are prefixed with dav: -->
+		  <url>dav:https://repository-bfds.forge.cloudbees.com/release/</url>
 		</repository>
 		<snapshotRepository>
-			<id>snapshots</id>
-			<url>http://localhost:8081/nexus/content/repositories/snapshots</url>
+			<id>saec-cloudbees-snapshot</id>
+			<name>saec-cloudbees-snapshot</name>
+			<url>dav:https://repository-bfds.forge.cloudbees.com/snapshot/</url>
 		</snapshotRepository>
-   </distributionManagement>
+	</distributionManagement>
   
   <repositories>
 	<repository>
@@ -49,7 +52,7 @@
             <url>http://spring-roo-repository.springsource.org/release</url>
         </repository>
 	<!-- Cloudbees maven repositories for releases and snapshots -->
-		<!--<repository>
+		<repository>
 			<id>release</id>
 			<name>Cloudbees release repository</name>
 			<url>https://repository-bfds.forge.cloudbees.com/release</url>
@@ -70,7 +73,7 @@
 			<snapshots>
 				<enabled>true</enabled>
 			</snapshots>
-		</repository>-->
+		</repository>
 		
 		<repository>
 			<id>codehaus</id>
