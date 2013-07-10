@@ -23,13 +23,13 @@
   
  <distributionManagement>
 		<repository>
-		  <id>saec-cloudbees-release</id>
+		  <id>cloudbees-private-repository</id>
 		  <name>saec-cloudbees-release</name>
 		  <!-- Webdav repository url are prefixed with dav: -->
 		  <url>dav:https://repository-bfds.forge.cloudbees.com/release/</url>
 		</repository>
 		<snapshotRepository>
-			<id>saec-cloudbees-snapshot</id>
+			<id>cloudbees-private-repository</id>
 			<name>saec-cloudbees-snapshot</name>
 			<url>dav:https://repository-bfds.forge.cloudbees.com/snapshot/</url>
 		</snapshotRepository>
